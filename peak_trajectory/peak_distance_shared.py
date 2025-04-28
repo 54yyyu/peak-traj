@@ -110,14 +110,14 @@ def cal_ot_mat(
 
 
 # Renamed from _cal_ot
-def _cal_ot_peaks(ot_cost_matrix_sh: SharedArray, peak_acc_matrix_sh: SharedArray, num_iter_max: int, i: int, j: int):
+def _cal_ot_peaks(ot_cost_matrix: SharedArray, peak_acc_matrix: SharedArray, num_iter_max: int, i: int, j: int):
     """
     Computes the EMD between peak i and peak j using shared memory arrays.
     (Adapted from _cal_ot for genes) # Modified
     """
     # Unpack shared memory arrays
-    ot_cost_matrix = ot_cost_matrix_sh.as_array()
-    peak_acc_matrix = peak_acc_matrix_sh.as_array()
+    # ot_cost_matrix = ot_cost_matrix_sh.as_array()
+    # peak_acc_matrix = peak_acc_matrix_sh.as_array()
 
     # Extract accessibility vectors for peak i and peak j
     peak_i = peak_acc_matrix[:, i].copy() # Renamed, use .copy() for safety [cite: 143]
