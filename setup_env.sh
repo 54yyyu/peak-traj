@@ -1,16 +1,16 @@
-# module load cuda12.2/
-# module load mamba
-# mamba init
-# source /burg/home/yy3448/.bashrc
-module load cuda
+module load cuda12.2/
+module load mamba
 mamba init
-source ~/.bashrc
+source /burg/home/yy3448/.bashrc
+# module load cuda
+# mamba init
+# source ~/.bashrc
 
-if mamba env list | grep -q 'peak'; then
-    echo "Environment 'peak' found. Activating it..."
-    mamba activate peak
+if mamba env list | grep -q 'peak_traj'; then
+    echo "Environment 'peak_traj' found. Activating it..."
+    mamba activate peak_traj
 else
-    echo "Environment 'peak' not found. Creating it..."
+    echo "Environment 'peak_traj' not found. Creating it..."
     mamba create -n peak_traj python=3.11 --yes
     mamba activate peak_traj
 fi
