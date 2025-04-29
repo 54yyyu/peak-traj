@@ -16,7 +16,7 @@ else
 fi
 
 pip install pandas numpy==1.26 anndata muon scikit-learn umap-learn
-pip install pyranges gffutils pybedtools
+pip install pyranges gffutils pybedtools plotly
 pip install scipy h5py tables mofapy2 flit
 pip install gtfparse intervaltree igraph leidenalg
 pip install 'gene-trajectory[widgets]'
