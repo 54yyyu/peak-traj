@@ -1,0 +1,7 @@
+data_processing/raw_data/
+multiome_data/
+10x_pbmc/
+notebooks/tutorial_data/
+notebooks/models/
+__pycache__/
+notebooks/pbmc10k.h5mu
